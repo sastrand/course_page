@@ -1,6 +1,81 @@
 <!DOCTYPE html>
 <html>
+   <style>
+
+.myButton {
+   -moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+   -webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+   box-shadow:inset 0px 1px 3px 0px #91b8b3;
+   background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
+   background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+   background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+   background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+   background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+   background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
+   background-color:#768d87;
+   -moz-border-radius:5px;
+   -webkit-border-radius:5px;
+   border-radius:5px;
+   border:1px solid #566963;
+   display:inline-block;
+   cursor:pointer;
+   color:#ffffff;
+   font-family:Arial;
+   font-size:15px;
+   font-weight:bold;
+   padding:11px 23px;
+   text-decoration:none;
+   text-shadow:0px -1px 0px #2b665e;
+}
+     .myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
+	background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
+	background-color:#6c7c7c;
+     }
+     .myButton:active {
+	position:relative;
+	top:1px;
+     }
+
+     p, table, a {
+	margin-left: 40px;
+     }
+     body {
+	font-family: "Gill Sans", sans-serif;
+     }
+     table{
+	border: 1px solid black;
+	border-collapse: collapse;
+     }
+     th, td {
+	padding: 8px;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+     }
+   </style>
    <body>
-      <a href="kata.html">New Beginnings Kata</a>
+      <h2>New Beginnings Winter 2018</h2>
+      <!--<a href="kata.html" class="button">Kata for Wu's Lab</a>      -->
+      <a href="kata.html" class="myButton">Kata for Wu's Lab</a>
+      <br>
+      <h4>Office Hours</h4>
+      <p>My office hours will be in the fishbowl every <strong> Friday from 1330 to 1530 </strong>except on the Fridays with conflicting enrichment activities (noted below).</p>
+      <table>
+	 <tr>
+	    <td>Friday, February 9</td><td>0900-1100</td>
+	 </tr>
+	 <tr>
+	    <td>Friday, March 9</td><td>0900-1100</td>
+	 </tr>
+      </table>
+      <h4>Other Resources</h4>
+      <a href="https://drive.google.com/open?id=11wMhW8rrmMP1iov7_z7DGHDlf4rze3_x" class="myButton">Slides for Wu's Lab</a>
+      <p>To access slides you must be logged in to your pdx.edu google account.</p>
    </body>
 </html>
