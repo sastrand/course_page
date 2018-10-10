@@ -1,0 +1,100 @@
+
+ _        ______     _        _______  ______   _______
+( (    /|(  ___ \   ( \      (  ___  )(  ___ \ (  ____ )
+|  \  ( || (   ) )  | (      | (   ) || (   ) )| (    \/
+|   \ | || (__/ /   | |      | (___) || (__/ / | (_____
+| (\ \) ||  __ (    | |      |  ___  ||  __ (  (_____  )
+| | \   || (  \ \   | |      | (   ) || (  \ \       ) |
+| )  \  || )___) )  | (____/\| )   ( || )___) )/\____) |
+|/    )_)|/ \___/   (_______/|/     \||/ \___/ \_______)
+
+
+
+---- Week 2 ----
+('Evan', 'Gabe')
+('Chad', 'Trina')
+('Haeyoon', 'Ellie')
+('Luke', 'Thomas')
+('Charlie', 'William')
+('George', 'Patrick')
+('Sascha', 'Aidan')
+
+
+---- Week 3 ----
+('Chad', 'Evan')
+('Haeyoon', 'Gabe')
+('Luke', 'Trina')
+('Charlie', 'Ellie')
+('George', 'Thomas')
+('Sascha', 'William')
+('Aidan', 'Patrick')
+
+
+---- Week 4 ----
+('Haeyoon', 'Chad')
+('Luke', 'Evan')
+('Charlie', 'Gabe')
+('George', 'Trina')
+('Sascha', 'Ellie')
+('Aidan', 'Thomas')
+('Patrick', 'William')
+
+
+---- Week 5 ----
+('Luke', 'Haeyoon')
+('Charlie', 'Chad')
+('George', 'Evan')
+('Sascha', 'Gabe')
+('Aidan', 'Trina')
+('Patrick', 'Ellie')
+('William', 'Thomas')
+
+
+---- Week 6 ----
+('Charlie', 'Luke')
+('George', 'Haeyoon')
+('Sascha', 'Chad')
+('Aidan', 'Evan')
+('Patrick', 'Gabe')
+('William', 'Trina')
+('Thomas', 'Ellie')
+
+
+---- Week 7 ----
+('George', 'Charlie')
+('Sascha', 'Luke')
+('Aidan', 'Haeyoon')
+('Patrick', 'Chad')
+('William', 'Evan')
+('Thomas', 'Gabe')
+('Ellie', 'Trina')
+
+
+---- Week 8 ----
+('Sascha', 'George')
+('Aidan', 'Charlie')
+('Patrick', 'Luke')
+('William', 'Haeyoon')
+('Thomas', 'Chad')
+('Ellie', 'Evan')
+('Trina', 'Gabe')
+
+
+---- Week 9 ----
+('Aidan', 'Sascha')
+('Patrick', 'George')
+('William', 'Charlie')
+('Thomas', 'Luke')
+('Ellie', 'Haeyoon')
+('Trina', 'Chad')
+('Gabe', 'Evan')
+
+
+---- Week 10 ----
+('Patrick', 'Aidan')
+('William', 'Sascha')
+('Thomas', 'George')
+('Ellie', 'Charlie')
+('Trina', 'Luke')
+('Gabe', 'Haeyoon')
+('Evan', 'Chad')
