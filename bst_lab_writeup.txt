@@ -1,0 +1,39 @@
+------------------------------------------------------------------------------
+- Names: [FILL IN HERE]
+------------------------------------------------------------------------------
+
+list_v_bst lab
+
+------------------------------------------------------------------------------
+1. With the test files `traffic_test.txt` and `whitelist_test.txt` how long 
+did it take (in seconds) to search the white list for each IP address in:
+------------------------------------------------------------------------------
+
+the list: [FILL IN HERE]
+the bst:  [FILL IN HERE]
+the set:  [FILL IN HERE] 
+
+------------------------------------------------------------------------------
+2. With the larger files `traffic.txt` and `whitelist.txt` how long did it 
+take (in seconds) to search the white list for each IP address in:
+------------------------------------------------------------------------------
+
+the list: [FILL IN HERE]
+the bst:  [FILL IN HERE]
+the set:  [FILL IN HERE]
+
+------------------------------------------------------------------------------
+3. What was the fastest data structure when running the test files? What 
+about this data structure gave it the advantage in this case?
+------------------------------------------------------------------------------
+
+[FILL IN HERE]
+
+------------------------------------------------------------------------------
+4. What was the fastest data structure when running the longer files? If 
+different from the answer to number 3, what about this data structure gave it
+the advantage in this case?
+------------------------------------------------------------------------------
+
+[FILL IN HERE]
+
