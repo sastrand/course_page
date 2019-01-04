@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style_top.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<title>Operating System Foundations Winter 2019</title>
+</head>
+<body>
+<div id="content">
+<h1>Operating System Foundations</h1>
+<h2>Course Project Introduction</h2>
+
+<p>
+The course project consists of five incremental programming assignments,
+based on the
+<a href="http://web.cecs.pdx.edu/~harry/Blitz/index.html">
+BLITZ
+</a>
+system.
+BLITZ consists of software to emulated a CPU and some simple devices,
+together with its own assembler, linker, loader, and high
+level programming language, called KPL. KPL has been used to write
+a complete operating system for BLITZ. Some components of this operating
+system will be given to you in the course programming assignments, but
+certain key components will be missing, and you will have to write the
+code to implement them. In this way, you will incrementally consruct
+your own operating system kernel, starting with basic synchronization
+primitives, then using them to construct various resource managers within
+your kernel that can be invoked concurrently. Eventually, you will implement
+system calls to invoke these resource managers from user-level programs.
+<p>
+The emulated CPU and devices are representative of real-world systems, but
+without some of the low-level complexity that complicates the process of
+learning about the key underlying concepts. By using BLITZ, students are
+able to study, in detail, the low-level operating system code that interacts
+with the hardware, as well as design, code and test their own modifications
+to the operating system. 
+
+<h2>Links to Project Resources</h2>
+
+<ul>
+<li><p><a href="http://web.cecs.pdx.edu/~harry/Blitz/index.html">The BLITZ System</a>:<br> 
+The official BLITZ website with code, documentation and various programming assignments, including the five used for this course and various others.
+<li><p><a href="http://web.cecs.pdx.edu/%7Ewalpole/class/cs510/fall2017/project/gettingstarted.html">Getting Started with BLITZ</a>:<br> 
+A step-by-step guide to getting BLITZ up and running on most systems.</p></li>
+<li><p><a href="http://www.vim.org/scripts/script.php?script_id=1862">KPL Vim Plugin</a>:<br>
+Install in <code>~/.vim/syntax/</code> and activate with <code>:setf kpl</code>. <br>
+<strong>Note:</strong> this file contains CRLF line breaks. You will need to use a tool like
+<code>dos2unix</code> to convert it for use on Unix or Linux.</p></li>
+<li><p><a href="https://github.com/dcolish/BLITZ/blob/master/tools/kpl-mode.el">KPL Emacs Plugin</a>: <br>
+Load each time with <code>M-x load-file</code> (or see 
+<a href="http://ergoemacs.org/emacs/emacs_installing_packages.html">these instructions</a>),<br>
+and then activate with <code>M-x kpl-mode</code>.</p></li>
+</ul>
+
+<h2>Programming Assignments</h2>
+<ul>
+<li><p>
+<A HREF="proj1.html">
+Assignment 1</A>
+<li><p>
+<A HREF="proj2.html">
+Assignment 2</A>
+<li><p>
+<A HREF="proj3.html">
+Assignment 3</A>
+<li><p>
+<A HREF="proj4.html">
+Assignment 4</A>
+<li><p>
+<A HREF="proj5.html">
+Assignment 5</A>
+</ul>
+
+<br>
+<p>  For general information, please see the
+<a href="http://web.cecs.pdx.edu/~sastrand"> course webpage</a>.</p>
+
+</div>
+
+
+</body></html>
