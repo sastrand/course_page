@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style_top.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<title>Setting up BLITZ</title>
+</head>
+<body>
+<div id="content">
+<!--Setting up BLITZ-->
+
+<h1>Getting Started with BLITZ</h1>
+
+<p>This guide is intended to supplement the documentation and files provided
+with <a href="http://web.cecs.pdx.edu/%7Eharry/Blitz/OSProject/p1/proj1.htm">Project 1</a>
+of Harry Porter's BLITZ system.</p>
+
+<h2>The Easy Way</h2>
+
+<p>The BLITZ tool suite is precompiled and ready to run on the CS department's Ubuntu machines. All you need to do is log in to <code>ada.cs.pdx.edu</code> using
+an ssh client (e.g. <code>ssh</code> for Linux/OSX, 
+<a href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/download.html">PuTTY</a>
+for Windows, <a href="https://www.serverauditor.com/">serverauditor</a> for iOS, or
+<a href="https://sonelli.com/">JuiceSSH</a> for Android), 
+then add the following lines to <code>~/.bash_profile</code>:</p>
+
+<pre><code>  export PATH=$PATH:~harry/public_html/Blitz/BlitzBin/Ubuntu64
+</code></pre>
+
+<p>Log out and back in, and you should now be able to run the BLITZ tools. To test
+this, type:</p>
+
+<pre><code>  kpl
+</code></pre>
+
+<p>by itself on a command line. You should see the following output:</p>
+
+<pre><code>  *****  ERROR: Missing package name on command line
+
+  **********  1 error detected!  **********
+</code></pre>
+
+<p>If you see anything else, then you have not properly configured your <code>PATH</code> variable,
+or you are not logged in to the right server (you must be logged in to <code>ada.cs.pdx.edu</code>).</p>
+
+<p>This is the easiest way to get started with BLITZ. However, 
+if you would prefer to work locally, then consult the appropriate guide below.
+Consider this option as a fall-back in case you have trouble getting it running.</p>
+
+<h2>Mac OS X (x86, 64 bit)</h2>
+
+<p>If you're running Mac OS X on a modern Intel-based machine, then the compiled binaries
+are already provided for you.</p>
+<p>
+Download the file blitz_mac_x86_bin.tar.gz from the D2L (d2l.pdx.edu). It is saved in the BlitzTools Module on the D2L CS510 course page. 
+Open a Terminal and run the following commands:
+</p>
+<pre><code>
+mv /Users/yourusername/Downloads/blitz_mac_x86_bin.tar.gz  ~
+cd ~
+tar -xvf blitz_mac_x86_bin.tar.gz
+mv blitz_mac_x86_bin BlitzTools 
+</code></pre>
+
+<p>Now, follow the instructions below in "Adding the BLITZ tools to your PATH".</p>
+
+<h2>Windows (x86, 32 or 64 bit)</h2>
+
+<p>To get BLITZ running on Windows, you'll need a copy of <a href="http://cygwin.com/install.html">Cygwin</a>.</p>
+
+<p><strong>You must install the 32-bit version of Cygwin</strong>. The 64-bit version will not work.
+If you have the 64-bit version already installed, you can install the 32-bit version 
+alongside it.</p>
+
+<p>When installing Cygwin, you should be presented with a screen to select additional 
+packages. You'll need the following:</p>
+
+<ul>
+<li>Under "Devel":
+<ul>
+<li>gcc-g++</li>
+<li>gcc-core</li>
+<li>make</li>
+</ul></li>
+<li>Under "Utils":
+<ul>
+<li>util-linux</li>
+</ul></li>
+<li>Under "Editors":
+<ul>
+<li>vim</li>
+<li>emacs  </li>
+</ul></li>
+</ul>
+
+<p>Now we need to download and compile the source files.
+By default, cygwin installs in <code>C:\cygwin</code>. If you have chosen a different directory,
+substitute that here. Right-click on <a href="http://web.cecs.pdx.edu/%7Ekstew2/cs333/blitz_x86_src.tar.gz">this link</a>
+and save it to the directory <code>C:\cygwin\home\yourusername\blitz</code> </p>
+
+<p>Now open cygwin and run the following commands:</p>
+
+<pre><code>  cd ~/blitz
+  tar -xvf blitz_x86_src.tar.gz
+  make
+</code></pre>
+
+<p>You should now be able to see the following executable files in your <code>~/blitz</code> directory:</p>
+
+<pre><code>  asm.exe
+  blitz.exe
+  check.exe
+  diskUtil.exe
+  dumpObj.exe
+  endian.exe
+  hexdump.exe
+  kpl.exe
+  lddd.exe
+</code></pre>
+
+<p>Now, follow the instructions below in "Adding the BLITZ tools to your PATH".</p>
+
+<h2>Linux (x86, 32 or 64 bit)</h2>
+
+<p>To install BLITZ on a Linux system, you'll need to compile the binaries from source.</p>
+
+<p>Since BLITZ was designed for a 32-bit architecture, you will need 32-bit versions
+of the C and C++ libraries in order to compile the code on a 64-bit machine. 
+To install these libraries, run the command appropriate for your distribution
+(or skip this step if you are using a 32-bit machine):</p>
+
+<p>On Debian-type distros (Debian, Ubuntu, Mint, etc):</p>
+
+<p>First determine which version of g++/gcc you have installed with:</p>
+
+<pre><code>  gcc -v 
+</code></pre>
+
+<p>At the bottom of the output you should see something like:</p>
+<pre><code>  Thread model: posix
+  gcc version 4.9.4 (Ubuntu 4.9.4-2ubuntu~14.04.1)
+</code></pre>
+
+<p>Use the first two numbers to install the appropriate 32-bit compilers.  In my example the version is 4.9 and the installation would be:</p>
+
+<pre><code>  sudo apt-get install gcc-4.9-multilib
+  sudo apt-get install g++-4.9-multilib
+</code></pre>
+
+<p>On Arch, edit <code>/etc/pacman.conf</code> and uncomment the lines around <code>[multilib]</code>, then run:</p>
+
+<pre><code>  sudo pacman -Sy
+  sudo pacman -S gcc-multilib
+</code></pre>
+
+<p>Once you have the appropriate libraries, download
+the Blitz source code from the link below and compile it by typing
+<code> make:</code>
+<pre><code> http://web.cecs.pdx.edu/~harry/Blitz/BlitzSrc/
+</pre></code>
+
+<p>You should now be able to see the following executable files in your <code>~/blitz</code> directory:</p>
+
+<pre><code>  asm
+  blitz
+  check
+  diskUtil
+  dumpObj
+  endian
+  hexdump
+  kpl
+  lddd
+</code></pre>
+
+<p>Now skip down and read the last section, "Adding the BLITZ tools to your PATH".</p>
+
+<h2>Something Else?</h2>
+
+<p>This document represents the systems for which I've managed to make a working
+version of the BLITZ tools. There are instructions for PowerPC and SPARC systems 
+in the BLITZ documentation, but I have not tested them. If you have one of these, or
+another kind of system (ARM, etc.) and working remotely is not an option for you 
+(if it is, see "The Easy Way" above), send an email to the 
+<a href="https://mailhost.cecs.pdx.edu/mailman/listinfo/cs510walpole">class mailing list</a>
+and I'll work with you to get it working.</p>
+
+<h2>Adding the BLITZ tools to your PATH</h2>
+
+<p>Note: this section only applies if you are working on your local machine.
+If you are working remotely on <code>chandra.cs.pdx.edu</code>, see "The Easy Way" above.</p>
+
+<p>In order to run these commands from anywhere, you must add <code>~/blitz</code> 
+to your <code>PATH</code> variable. This can be done by editing your <code>~/.bash_profile</code> 
+file directly, or by executing the following command:</p>
+
+<pre><code>  echo 'export PATH=$PATH:~/blitz' &gt;&gt; ~/.bash_profile
+</code></pre>
+
+<p>Then restart your terminal window, or type:</p>
+
+<pre><code>  source ~/.bash_profile
+</code></pre>
+
+<p>You should now be able to run the BLITZ tools. To test this, type:</p>
+
+<pre><code>  kpl
+</code></pre>
+
+<p>by itself on a command line. You should see the following output:</p>
+
+<pre><code>  *****  ERROR: Missing package name on command line
+
+  **********  1 error detected!  **********
+</code></pre>
+
+<p>If you see anything else, then either the program did not compile correctly,
+or you have not properly configured your <code>PATH</code> variable. Retrace your steps
+and double check for any mistakes.</p>
+
+<p>If you still can't get it working, send an email to the 
+<a href="https://mailhost.cecs.pdx.edu/mailman/listinfo/cs510walpole">class mailing list</a>
+asking for help.</p>
+
+</div>
+
+
+</body></html>
