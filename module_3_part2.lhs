@@ -1,4 +1,4 @@
-ew Beginnings Winter 2019
+New Beginnings Winter 2019
 Haskell Lab
 
 Module 3: Recursive data structures
@@ -118,7 +118,7 @@ Exercises
 > bTreeInOrder :: BTree a -> [a]
 > bTreeInOrder = undefined
 
-> prob2Test1 = bTreeInOrder (bstCreateFromList [4,9,1,1,7,5]) == [1,4,7,5,9]
+> prob2Test1 = bTreeInOrder (bstCreateFromList [4,9,1,1,7,5]) == [1,4,5,7,9]
 > prob2 = do
 >         putStrLn ("Test 1 = " ++ show (bTreeInOrder (bstCreateFromList 
 >           [4,9,1,1,7,5])))
